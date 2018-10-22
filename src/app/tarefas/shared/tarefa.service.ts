@@ -32,6 +32,7 @@ export class TarefaService {
         objs[index] = tarefa;
       }
     });
+    localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
   remover(id:number):void{
@@ -47,6 +48,7 @@ export class TarefaService {
         objs[index].concluida = !obj.concluida;
       }
     });
+    localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
 }
